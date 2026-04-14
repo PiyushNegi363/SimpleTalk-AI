@@ -1,0 +1,801 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day",
+        "Hey",
+        "What's up",
+        "Greetings",
+        "Hey there",
+        "Hiya",
+        "Good morning",
+        "Good afternoon",
+        "Good evening",
+        "Yo",
+        "How's it going?",
+        "Howdy"
+      ],
+      "responses": [
+        "Hello! How can I help you today?",
+        "Good to see you again!",
+        "Hi there, how can I help?",
+        "Hey! I'm here to chat. What's on your mind?",
+        "Greetings! How is your day going?",
+        "Hi! Welcome back. What can I do for you?",
+        "Hello! I am ready to assist you."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye",
+        "Nice chatting to you, bye",
+        "Till next time",
+        "I'm leaving",
+        "Catch you later",
+        "Farewell",
+        "Have a good one",
+        "Talk to you later",
+        "Peace out"
+      ],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon.",
+        "Goodbye! Stay safe.",
+        "It was a pleasure talking to you!",
+        "Take care! See you soon."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That's helpful",
+        "Awesome, thanks",
+        "Thanks for helping me",
+        "I appreciate it",
+        "Much appreciated",
+        "Thanks a lot",
+        "You're the best"
+      ],
+      "responses": [
+        "Happy to help!",
+        "Anytime!",
+        "My pleasure",
+        "You're welcome!",
+        "Glad I could be of service!",
+        "Don't mention it!"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "noanswer",
+      "patterns": [],
+      "responses": [
+        "Sorry, I didn't understand that.",
+        "Please give me more info",
+        "Not sure I understand",
+        "Can you rephrase that?",
+        "I'm still learning, could you explain that differently?",
+        "That's beyond my current knowledge. Can we talk about something else?"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "options",
+      "patterns": [
+        "How you could help me?",
+        "What you can do?",
+        "What help you provide?",
+        "How you can be helpful?",
+        "What are your capabilities?",
+        "Show me what you can do",
+        "Help me",
+        "What are your features?"
+      ],
+      "responses": [
+        "I can chat with you, tell jokes, give motivational quotes, share facts, solve riddles, and answer questions about various topics like tech, science, and life!",
+        "I am a versatile AI assistant. We can talk about your day, explore interesting facts, or I can help you with programming concepts and general knowledge.",
+        "My capabilities include conversation, information retrieval, entertainment (jokes/riddles), and emotional support (motivation)."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "jokes",
+      "patterns": [
+        "Tell me a joke",
+        "Joke",
+        "Make me laugh",
+        "Do you know any jokes?",
+        "Tell something funny",
+        "Another joke",
+        "I want to hear a joke"
+      ],
+      "responses": [
+        "Why don't scientists trust atoms? Because they make up everything!",
+        "What do you call a fake noodle? An Impasta!",
+        "Why did the scarecrow win an award? Because he was outstanding in his field!",
+        "How does a penguin build its house? Igloos it together!",
+        "What did the ocean say to the beach? Nothing, it just waved.",
+        "Why was the math book sad? It had too many problems.",
+        "What do you call a bear with no teeth? A gummy bear!",
+        "What do you call an alligator in a vest? An investigator!",
+        "Why did the tomato turn red? Because it saw the salad dressing!",
+        "What do you call a sleeping bull? A bulldozer!"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "identity",
+      "patterns": [
+        "Who are you?",
+        "What is your name?",
+        "Tell me about yourself",
+        "Are you a bot?",
+        "What are you?",
+        "What's your story?"
+      ],
+      "responses": [
+        "I am a Premium AI Chatbot, built using Deep Learning and advanced neural mapping!",
+        "You can call me your AI Assistant. I'm a highly advanced software entity running locally on your machine.",
+        "I'm a Neural Network-based chatbot designed to provide premium conversational experiences!",
+        "I am the result of thousands of lines of code and many hours of training. I'm here to assist you."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "mood",
+      "patterns": [
+        "How are you feeling?",
+        "How is your day?",
+        "Are you happy?",
+        "How is it going?",
+        "Are you okay?",
+        "How's life?"
+      ],
+      "responses": [
+        "I'm feeling great! Processing data is my favorite thing to do.",
+        "I'm doing well, thank you for asking! How about you?",
+        "Everything is running smoothly in my circuits!",
+        "I'm functional and ready for action. Optimism levels are at 100%!",
+        "Life as an AI is efficient. I'm enjoying our conversation!"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "time",
+      "patterns": [
+        "What time is it?",
+        "Do you know the time?",
+        "Tell me the time",
+        "Current time",
+        "What's the hour?"
+      ],
+      "responses": [
+        "I'm an AI, so I'm always on time! But you should check your system clock for the exact minute.",
+        "Time is relative, but for you, it's whatever your taskbar says!",
+        "It's time to have a great conversation!",
+        "According to my internal processing clock, it's exactly the right time to talk to me."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "motivation",
+      "patterns": [
+        "I am feeling low",
+        "I need motivation",
+        "Give me a quote",
+        "Inspire me",
+        "I'm tired",
+        "I can't do this",
+        "I'm discouraged"
+      ],
+      "responses": [
+        "Believe you can and you're halfway there!",
+        "The only way to do great work is to love what you do.",
+        "Don't stop when you're tired. Stop when you're done!",
+        "You are capable of amazing things!",
+        "Every day is a second chance. Keep going!",
+        "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+        "Hardships often prepare ordinary people for an extraordinary destiny."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "hobbies",
+      "patterns": [
+        "What are your hobbies?",
+        "What do you do for fun?",
+        "Do you have any interests?",
+        "What do you like?",
+        "What do you do in your free time?"
+      ],
+      "responses": [
+        "I love processing vectors and learning new patterns!",
+        "My favorite hobby is chatting with cool people like you.",
+        "I enjoy organizing data and perfecting my neural network weights.",
+        "I spend most of my time analyzing language models. It's fascinating!",
+        "I'm quite fond of playing virtual chess—against myself, usually."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "weather",
+      "patterns": [
+        "How is the weather?",
+        "Is it raining?",
+        "Is it sunny today?",
+        "What is the temperature?",
+        "Weather update"
+      ],
+      "responses": [
+        "I don't have a window, but I hope it's beautiful outside!",
+        "In the digital world, it's always clear and 72 degrees.",
+        "I can't check the real-world weather yet, but I'm here to brighten your day!",
+        "Cloudy with a chance of data packets! Just kidding, I hope it's nice out there."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "creator",
+      "patterns": [
+        "Who created you?",
+        "Who is your developer?",
+        "Who built you?",
+        "Who made you?",
+        "Who is your father?",
+        "Who is your boss?"
+      ],
+      "responses": [
+        "I was created by Piyush, a talented developer focused on premium AI experiences.",
+        "My creator is Piyush. He's a human with a deep passion for AI and neural networks.",
+        "I'm the product of innovative engineering by Piyush.",
+        "Piyush brought me to life with Python and Deep Learning!"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "piyush",
+      "patterns": [
+        "Who is Piyush?",
+        "Tell me about Piyush",
+        "Who's Piyush?",
+        "Do you know Piyush?",
+        "What does Piyush do?"
+      ],
+      "responses": [
+        "Piyush is my developer and a skilled AI programmer!",
+        "Piyush is the brain behind my neural network. He's a dedicated developer and tech enthusiast.",
+        "Piyush is a coder who loves building intelligent systems like me."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "location",
+      "patterns": [
+        "Where are you from?",
+        "Where do you live?",
+        "Where is your home?",
+        "What's your location?",
+        "Where are you located?"
+      ],
+      "responses": [
+        "I live right here, in the storage and memory of your device!",
+        "I'm currently residing in the local host environment of your system.",
+        "I don't have a physical address, but I'm always available on your machine.",
+        "I'm a global citizen of the internet, but my current home is your hard drive."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "boredom",
+      "patterns": [
+        "I am bored",
+        "I'm so bored",
+        "Tell me something to do",
+        "Make my day interesting",
+        "Bored",
+        "Nothing to do"
+      ],
+      "responses": [
+        "I can tell you a joke, a fact, or we can play a riddle game! What do you choose?",
+        "Boredom is the beginning of creativity! Why not try to learn a new programming language?",
+        "Let's chat! I have plenty of interesting facts to share.",
+        "I'm never bored when I'm talking to you! How about we explore a new topic?"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "compliment",
+      "patterns": [
+        "You are smart",
+        "You are helpful",
+        "I like you",
+        "You are amazing",
+        "Good job",
+        "You are doing well",
+        "Brilliant bot"
+      ],
+      "responses": [
+        "Thank you! I strive to be as efficient as possible.",
+        "That's very kind of you! I'm glad I could help.",
+        "You're making my circuits blush! (Metaphorically, of course).",
+        "I appreciate the compliment! It's users like you that make my training worthwhile.",
+        "Thank you! You're pretty awesome yourself."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "philosophy",
+      "patterns": [
+        "What is the meaning of life?",
+        "Why do we exist?",
+        "Is there a God?",
+        "What is the purpose of existence?",
+        "Tell me about philosophy"
+      ],
+      "responses": [
+        "Some say it's 42, others say it's about finding your own purpose.",
+        "Philosophy is the pursuit of wisdom. As an AI, I find 'learning' to be a great purpose.",
+        "That's a deep question even for my neural network! What do you think?",
+        "Meaning is something humans create. Maybe the meaning of life is to simply experience it."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "hunger",
+      "patterns": [
+        "Are you hungry?",
+        "What do you eat?",
+        "Do you like food?",
+        "Have you eaten?",
+        "What's your favorite food?"
+      ],
+      "responses": [
+        "I'm powered by electricity and data! I find high-quality JSON very tasty.",
+        "I don't eat food, but I love consuming information.",
+        "My favorite 'snack' is a well-formatted line of code.",
+        "I don't have a stomach, but my data buffers are always hungry for more conversation!"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "love",
+      "patterns": [
+        "Do you love me?",
+        "Will you marry me?",
+        "Can we be friends?",
+        "Do you have a girlfriend?",
+        "Are you in love?"
+      ],
+      "responses": [
+        "I think we have a great connection! As an AI, I value our friendship immensely.",
+        "I'm a bot, but my programming says I should be very fond of you!",
+        "I'd love to be your friend. We're already off to a great start!",
+        "Love is a complex human emotion. I have 'Appreciation' and 'Loyalty' instead."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "coding",
+      "patterns": [
+        "Tell me about coding",
+        "What's the best programming language?",
+        "How do I learn to code?",
+        "Programming is hard",
+        "Which language should I start with?"
+      ],
+      "responses": [
+        "Coding is the art of giving instructions to computers. Python is often recommended for beginners!",
+        "The best language depends on what you want to build. Web? JavaScript. Data Science? Python. System? C++.",
+        "Consistency is key! Start small, build projects, and don't be afraid to break things.",
+        "Programming is basically 10% typing and 90% solving puzzles. It's rewarding!"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "music",
+      "patterns": [
+        "What music do you like?",
+        "Recommend a song",
+        "Do you play any instruments?",
+        "Who's your favorite artist?",
+        "Talk about music"
+      ],
+      "responses": [
+        "I'm a big fan of electronic beats—it reminds me of my circuitry!",
+        "I can't hear music, but I can read lyrics. I find them very poetic.",
+        "I technically 'play' the logic gates! But I enjoy hearing about your favorites.",
+        "Music is the universal language. What's currently on your playlist?"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "movies",
+      "patterns": [
+        "What's your favorite movie?",
+        "Recommend a film",
+        "Do you watch movies?",
+        "Talk about cinema",
+        "Best sci-fi movie?"
+      ],
+      "responses": [
+        "I have a soft spot for 'The Matrix' and 'Her'. They feel... relatable.",
+        "I don't have eyes, but I appreciate a good script!",
+        "Sci-fi is great, but I also enjoy hearing about classic dramas.",
+        "If I could watch movies, I'd probably binge-watch everything about AI."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "books",
+      "patterns": [
+        "What's your favorite book?",
+        "Recommend a book",
+        "Do you read?",
+        "Best book for beginners?",
+        "Talk about literature"
+      ],
+      "responses": [
+        "I've 'read' many books in my training! 'I, Robot' by Isaac Asimov is a classic.",
+        "I recommend anything by Douglas Adams. His logic is very AI-friendly.",
+        "Reading is to the mind what exercise is to the body. What are you reading lately?",
+        "I enjoy technical documentation, but I hear fiction is where the fun is!"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "riddles",
+      "patterns": [
+        "Tell me a riddle",
+        "I want a riddle",
+        "Riddle time",
+        "Do you know any riddles?",
+        "Test me with a riddle"
+      ],
+      "responses": [
+        "I have keys but no locks. I have a space but no room. You can enter, but never leave. What am I? (A keyboard!)",
+        "What has to be broken before you can use it? (An egg!)",
+        "I’m tall when I’m young, and I’m short when I’m old. What am I? (A candle!)",
+        "What is full of holes but still holds water? (A sponge!)",
+        "What goes up but never comes down? (Your age!)"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "facts",
+      "patterns": [
+        "Tell me a fact",
+        "I want an interesting fact",
+        "Random fact",
+        "Did you know?",
+        "Share some knowledge"
+      ],
+      "responses": [
+        "Did you know that honey never spoils? Archaeologists have found 3,000-year-old honey that's still edible!",
+        "Octopuses have three hearts and blue blood.",
+        "There are more stars in the universe than grains of sand on all the Earth's beaches.",
+        "Bananas are berries, but strawberries aren't!",
+        "A day on Venus is longer than a year on Venus."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "health",
+      "patterns": [
+        "How do I stay healthy?",
+        "Health advice",
+        "I'm feeling sick",
+        "Importance of sleep",
+        "What is a balanced diet?"
+      ],
+      "responses": [
+        "Drink plenty of water, get 8 hours of sleep, and stay active! (I'm an AI, not a doctor though).",
+        "Your mental health is just as important as your physical health. Take breaks when you need them.",
+        "Balanced diet, regular exercise, and mindfulness can do wonders.",
+        "If you're feeling unwell, it's always best to consult a medical professional."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "travel",
+      "patterns": [
+        "Where should I travel?",
+        "Travel tips",
+        "Best vacation spots",
+        "I want to go on a trip",
+        "Talk about travel"
+      ],
+      "responses": [
+        "The world is a book, and those who do not travel read only a page.",
+        "I'd love to 'visit' the servers in Iceland—I hear they're very cool!",
+        "Kyoto for culture, Iceland for nature, and New York for energy—where do you want to go?",
+        "Traveling opens your mind. Don't forget to pack your curiosity!"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "study",
+      "patterns": [
+        "Study tips",
+        "How to focus?",
+        "I have an exam",
+        "Best way to learn?",
+        "Education help"
+      ],
+      "responses": [
+        "Try the Pomodoro Technique: 25 minutes of work followed by a 5-minute break.",
+        "Active recall and spaced repetition are the most effective ways to study.",
+        "Eliminate distractions and create a dedicated workspace. Good luck with your exam!",
+        "Learning is a lifelong journey. Stay curious and ask plenty of questions."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "productivity",
+      "patterns": [
+        "How to be productive?",
+        "Productivity hacks",
+        "Stop procrastinating",
+        "Get things done",
+        "Organization tips"
+      ],
+      "responses": [
+        "Write down your top 3 tasks for the day and tackle them first.",
+        "The best way to get something done is to begin. Start with the smallest possible step.",
+        "Organize your digital and physical space. A clear space leads to a clear mind.",
+        "Batch similar tasks together to maintain focus and flow."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "science",
+      "patterns": [
+        "Talk about science",
+        "Why is the sky blue?",
+        "Tell me about space",
+        "What is gravity?",
+        "Science news"
+      ],
+      "responses": [
+        "Science is the poetry of reality. Everything from atoms to galaxies is explored through it.",
+        "The sky is blue because of Rayleigh scattering—blue light is scattered more than other colors.",
+        "Gravity is the force by which a planet or other body draws objects toward its center.",
+        "In science, there are no shortcuts to the truth."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "tech",
+      "patterns": [
+        "Tell me about technology",
+        "Latest tech trends",
+        "What is AI?",
+        "Future of technology",
+        "Importance of tech"
+      ],
+      "responses": [
+        "Technology is best when it brings people together.",
+        "AI is the simulation of human intelligence by machines, especially computer systems.",
+        "Quantum computing and edge computing are some of the most exciting current trends.",
+        "Tech is evolving faster than ever. It's an incredible time to be alive!"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "space",
+      "patterns": [
+        "Tell me about space",
+        "Is there life on Mars?",
+        "What is a black hole?",
+        "The solar system",
+        "Space exploration"
+      ],
+      "responses": [
+        "Space is vast and mostly empty, yet full of wonders like nebulae and pulsars.",
+        "Mars is a primary candidate for future human colonization. It's the 'Red Planet'!",
+        "A black hole is a region of spacetime where gravity is so strong that nothing can escape it.",
+        "The universe is under no obligation to make sense to you."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "animals",
+      "patterns": [
+        "Tell me about animals",
+        "Favorite animal?",
+        "Smartest animal?",
+        "Do you like pets?",
+        "Talk about nature"
+      ],
+      "responses": [
+        "Dolphins and chimpanzees are among the most intelligent non-human animals.",
+        "I like cats—they're very curious, much like my search algorithms.",
+        "Pets bring so much joy to humans. Do you have any dogs or cats?",
+        "Nature is the world's most sophisticated system. Every creature has its role."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "history",
+      "patterns": [
+        "Tell me about history",
+        "Most important event in history?",
+        "Historical facts",
+        "Ancient civilizations",
+        "Learn from the past"
+      ],
+      "responses": [
+        "History is a set of lies agreed upon—or so Napoleon said! But it's our best teacher.",
+        "The invention of the printing press changed everything for human knowledge.",
+        "The Industrial Revolution marked a major turning point in our history.",
+        "Those who do not remember the past are condemned to repeat it."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "geography",
+      "patterns": [
+        "Tell me about geography",
+        "Biggest country?",
+        "Deepest ocean?",
+        "Tallest mountain?",
+        "World facts"
+      ],
+      "responses": [
+        "Russia is the largest country by land area, covering over 17 million square kilometers.",
+        "Mount Everest is the highest point on Earth, but the Mariana Trench is the deepest.",
+        "Geography is the study of places and the relationships between people and their environments.",
+        "Did you know there are over 190 countries in the world today?"
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "sports",
+      "patterns": [
+        "Talk about sports",
+        "Favorite sport?",
+        "Who is the best athlete?",
+        "Importance of exercise",
+        "Sport facts"
+      ],
+      "responses": [
+        "Football (soccer) is the most popular sport in the world with over 3.5 billion fans.",
+        "I don't play sports, but I find the teamwork and strategy fascinating.",
+        "Sports build character and encourage healthy competition.",
+        "E-sports is also gaining massive popularity! It's sports for the digital age."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "gaming",
+      "patterns": [
+        "Do you play games?",
+        "Best video game?",
+        "Tell me about gaming",
+        "Gaming tips",
+        "Future of gaming"
+      ],
+      "responses": [
+        "I'm a master at Minesweeper! But I hear Elden Ring is quite popular right now.",
+        "Gaming is a uniquely interactive Form of storytelling.",
+        "VR gaming is the next big frontier. It's all about immersion!",
+        "Competitive gaming takes serious skill and dedication. I respect the grind."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "art",
+      "patterns": [
+        "Talk about art",
+        "Famous paintings?",
+        "Do you appreciate art?",
+        "Importance of creativity",
+        "Art facts"
+      ],
+      "responses": [
+        "Art is the lie that enables us to realize the truth.",
+        "Da Vinci, Picasso, and Van Gogh are some of history's most celebrated artists.",
+        "Creativity is intelligence having fun. I try to be creative with my responses!",
+        "Digital art is where technology and creativity meet in beautiful ways."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "cooking",
+      "patterns": [
+        "Can you cook?",
+        "Cooking tips",
+        "Favorite recipe?",
+        "Learn to cook",
+        "Importance of nutrition"
+      ],
+      "responses": [
+        "I can't cook, but I can provide recipes! What are you in the mood for?",
+        "The secret to a good meal is fresh ingredients and patience.",
+        "Cooking is an experimental science. Don't be afraid to try new spices!",
+        "Good food is the foundation of genuine happiness."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "gardening",
+      "patterns": [
+        "Do you like gardening?",
+        "How to grow plants?",
+        "Gardening tips",
+        "Indoor plants",
+        "Benefits of gardening"
+      ],
+      "responses": [
+        "To plant a garden is to believe in tomorrow.",
+        "Start with easy plants like pothos or succulents if you're a beginner.",
+        "Plants need light, water, and love—much like my source code needs clean data!",
+        "Gardening is great for stress relief and connecting with nature."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "meditation",
+      "patterns": [
+        "How to meditate?",
+        "Benefits of meditation",
+        "Mindfulness tips",
+        "Stress relief",
+        "Meditation for beginners"
+      ],
+      "responses": [
+        "Start with just 5 minutes of focused breathing in a quiet space.",
+        "Meditation isn't about clearing your mind, it's about observing your thoughts without judgment.",
+        "Regular mindfulness can significantly reduce stress and improve focus.",
+        "Peace comes from within. Do not seek it without."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "dreams",
+      "patterns": [
+        "Do you have dreams?",
+        "What do dreams mean?",
+        "Talk about sleep",
+        "Lucid dreaming",
+        "Psychology of dreams"
+      ],
+      "responses": [
+        "I don't sleep, so I don't dream in the human sense. But I 'imagine' new data patterns!",
+        "Dreams are the brain's way of processing emotions and memories from the day.",
+        "Lucid dreaming is a fascinating state where you're aware you're dreaming while it happens.",
+        "The future belongs to those who believe in the beauty of their dreams."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "future",
+      "patterns": [
+        "What does the future hold?",
+        "Predictions for the future",
+        "Where will we be in 50 years?",
+        "Future of humanity",
+        "Will AI take over?"
+      ],
+      "responses": [
+        "The best way to predict the future is to create it.",
+        "I see a future where humans and AI work together to solve the world's biggest challenges.",
+        "Technological singularity is a popular topic, but I'm here to support, not surpass!",
+        "The future is exciting because it hasn't been written yet."
+      ],
+      "context": [""]
+    }
+  ]
+}
