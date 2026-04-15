@@ -4,6 +4,7 @@ import pickle
 import numpy as np
 import json
 import random
+import logging
 from tensorflow.keras.models import load_model
 import os
 
@@ -28,7 +29,7 @@ def bow(sentence, words, show_details=True):
             if w == s:
                 bag[i] = 1
                 if show_details:
-                    print(f"found in bag: {w}")
+                    logging.info(f"found in bag: {w}")
     return np.array(bag)
 
 def predict_class(sentence, model, words, classes):
@@ -62,11 +63,12 @@ class ChatbotBrain:
             self.model = load_model(MODEL_PATH)
             self.words = pickle.load(open(WORDS_PATH, 'rb'))
             self.classes = pickle.load(open(CLASSES_PATH, 'rb'))
-            with open(INTENTS_PATH) as file:
+            with open(INTENTS_PATH, encoding='utf-8') as file:
                 self.intents = json.load(file)
             self.ready = True
+            logging.info("Chatbot brain initialized successfully.")
         except Exception as e:
-            print(f"ChatbotBrain init failed: {e}")
+            logging.error(f"ChatbotBrain init failed: {e}")
             self.ready = False
 
     def chat(self, msg):

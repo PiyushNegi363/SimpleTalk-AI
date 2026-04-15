@@ -7,7 +7,11 @@ from sqlalchemy.orm import sessionmaker
 from datetime import datetime
 from typing import List
 import os
+import logging
 from chat_logic import ChatbotBrain
+
+# Setup logging
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
 # Initialize Chatbot Brain
 brain = ChatbotBrain()

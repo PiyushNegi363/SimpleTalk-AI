@@ -14,6 +14,8 @@ export default function Home() {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
+  
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
   useEffect(() => {
     fetchHistory();
@@ -27,7 +29,7 @@ export default function Home() {
 
   const fetchHistory = async () => {
     try {
-      const res = await fetch('http://localhost:8000/history');
+      const res = await fetch(`${API_URL}/history`);
       const data = await res.json();
       setMessages(data);
     } catch (err) {
@@ -53,7 +55,7 @@ export default function Home() {
     setMessages(prev => [...prev, tempUserMsg]);
 
     try {
-      const res = await fetch('http://localhost:8000/chat', {
+      const res = await fetch(`${API_URL}/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: userMsgContent })
@@ -76,7 +78,7 @@ export default function Home() {
   const clearHistory = async () => {
     if (!confirm("Are you sure you want to clear chat history?")) return;
     try {
-      await fetch('http://localhost:8000/history', { method: 'DELETE' });
+      await fetch(`${API_URL}/history`, { method: 'DELETE' });
       setMessages([]);
     } catch (err) {
       console.error("Failed to clear history:", err);
@@ -159,8 +161,10 @@ export default function Home() {
           </div>
         ))}
         {isLoading && (
-          <div style={{ alignSelf: 'flex-start', padding: '10px', opacity: 0.5 }}>
-            <span>Typing...</span>
+          <div style={{ alignSelf: 'flex-start', padding: '12px 18px', background: 'var(--chat-bot)', border: '1px solid var(--border)', borderRadius: '18px 18px 18px 2px', display: 'flex', gap: '5px', alignItems: 'center' }}>
+            <span style={{ width: '8px', height: '8px', background: 'var(--foreground)', borderRadius: '50%', animation: 'fadeIn 1s infinite alternate', opacity: 0.5 }}></span>
+            <span style={{ width: '8px', height: '8px', background: 'var(--foreground)', borderRadius: '50%', animation: 'fadeIn 1s infinite alternate 0.3s', opacity: 0.5 }}></span>
+            <span style={{ width: '8px', height: '8px', background: 'var(--foreground)', borderRadius: '50%', animation: 'fadeIn 1s infinite alternate 0.6s', opacity: 0.5 }}></span>
           </div>
         )}
       </div>

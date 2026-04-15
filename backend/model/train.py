@@ -22,7 +22,7 @@ def train_model():
     MODEL_DIR = os.path.dirname(os.path.abspath(__file__))
     
     print(f"Loading intents from: {INTENTS_PATH}")
-    with open(INTENTS_PATH) as file:
+    with open(INTENTS_PATH, encoding="utf-8") as file:
         intents = json.load(file)
 
     words = []
@@ -94,7 +94,7 @@ def train_model():
     hist = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=1)
     
     # Save artifacts
-    model.save(os.path.join(MODEL_DIR, 'chatbot_model.h5'), hist)
+    model.save(os.path.join(MODEL_DIR, 'chatbot_model.h5'))
     pickle.dump(words, open(os.path.join(MODEL_DIR, 'words.pkl'), 'wb'))
     pickle.dump(classes, open(os.path.join(MODEL_DIR, 'classes.pkl'), 'wb'))
 

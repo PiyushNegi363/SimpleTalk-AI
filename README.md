@@ -12,10 +12,12 @@ A state-of-the-art, deep learning-powered chatbot built with a focus on premium 
 
 - **🧠 Deep Learning Brain**: Uses a Sequential Neural Network (TensorFlow/Keras) specifically trained on a rich `intents.json` dataset.
 - **✨ Premium UI**: A glassmorphic, modern chat interface built with Next.js and high-end CSS.
+- **💬 Automated UX**: Custom CSS pulsing typing indicators for natural conversational flow.
 - **📚 Massive Knowledge Base**: Over 50+ intent categories covering everything from general philosophy to technical coding advice.
 - **💾 Persistent History**: Integrated SQLite database using SQLAlchemy to store and retrieve your conversations.
-- **⚡ Real-time Performance**: Optimized FastAPI backend for ultra-low latency responses.
+- **⚡ Real-time Performance**: Optimized FastAPI backend for ultra-low latency responses with structured logging.
 - **🎨 Personalized Identity**: Deeply integrated knowledge about its creator, **Piyush**.
+- **⚙️ Production-Ready**: Decoupled environments (`.env.local`) and UTF-8 safe data pipelines.
 
 ---
 
@@ -87,6 +89,10 @@ cd frontend
 # Install dependencies
 npm install
 
+# Setup Environment Variables
+# Create a .env.local file in the `frontend` directory:
+# NEXT_PUBLIC_API_URL=http://localhost:8000
+
 # Start the development server
 npm run dev
 ```
@@ -108,9 +114,3 @@ To add new knowledge to your bot:
 ## 👤 Credits
 
 Developed with ❤️ by **Piyush**.
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
